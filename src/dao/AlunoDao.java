@@ -98,6 +98,8 @@ public class AlunoDao {
 		stmt.executeQuery();
 		stmt.close();
 		con.close();
+		
+		System.out.println("Insercao finalizada!");
 	}
 	
 	public void deletar(int id) throws SQLException {
@@ -105,6 +107,8 @@ public class AlunoDao {
 		PreparedStatement stmt = con.prepareStatement(sql);
 		stmt.executeQuery();
 		stmt.close();
+		
+		System.out.println("Remocao finalizada!");
 	}
 	
 	
@@ -116,5 +120,7 @@ public class AlunoDao {
 		
 		sc.close();
 		stmt.close();
+		
+		System.out.println("Alteracao finalizada!");
 	}
 }
