@@ -1,0 +1,14 @@
+create database av2db;
+
+use av2db;
+
+create table aluno(
+id int NOT NULL AUTO_INCREMENT,
+nome varchar(50),
+email varchar(50),
+cpf varchar(11),
+dataDeNascimento date,
+naturalidade varchar(50),
+endereco varcahr(50),
+PRIMARY KEY (id)
+);
