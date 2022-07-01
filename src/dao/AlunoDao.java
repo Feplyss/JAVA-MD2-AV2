@@ -86,8 +86,7 @@ public class AlunoDao {
 		String sql;
 		sql = "INSERT INTO aluno (id, nome, email, cpf, dataDeNascimento, naturalidade, endereco) VALUES(?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement stmt = con.prepareStatement(sql);
-		
-		stmt.setInt(1,aluno.getId());
+	
 		stmt.setString(2,aluno.getNome());
 		stmt.setString(3,aluno.getEmail());
 		stmt.setString(4,aluno.getCpf());
