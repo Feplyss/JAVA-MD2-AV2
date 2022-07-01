@@ -11,5 +11,8 @@ public interface InterfaceDao {
 	public List<Aluno> listar() throws SQLException;
 	
 	public void ListarPelaLetra(Aluno aluno, String letras);
-
+	
+	public void deletar(int id);
+	
+	public void alterar(int id, String s);
 }
