@@ -84,15 +84,16 @@ public class AlunoDao {
 	
 	public void adicionar(Aluno aluno) throws SQLException {
 		String sql;
-		sql = "INSERT INTO aluno (nome, email, cpf, dataDeNascimento, naturalidade, endereco) VALUES(?, ?, ?, ?, ?, ?)";
+		sql = "INSERT INTO aluno (nome, email, cpf, dataDeNascimento, naturalidade, endereco) VALUES(?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement stmt = con.prepareStatement(sql);
 	
-		stmt.setString(1,aluno.getNome());
-		stmt.setString(2,aluno.getEmail());
-		stmt.setString(3,aluno.getCpf());
-		stmt.setString(4,aluno.getDataDeNascimento());//aaaa/mm/dd
-		stmt.setString(5,aluno.getNaturalidade());
-		stmt.setString(6,aluno.getEndereco());
+		stmt.setInt(1,aluno.getId());
+		stmt.setString(2,aluno.getNome());
+		stmt.setString(3,aluno.getEmail());
+		stmt.setString(4,aluno.getCpf());
+		stmt.setString(5,aluno.getDataDeNascimento());//aaaa/mm/dd
+		stmt.setString(6,aluno.getNaturalidade());
+		stmt.setString(7,aluno.getEndereco());
 		
 		stmt.executeQuery();
 		stmt.close();
